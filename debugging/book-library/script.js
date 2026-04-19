@@ -42,6 +42,12 @@ function submit() {
   } else {
     let book = new Book(title.value, author.value, pages.value, check.value);
     myLibrary.push(book);
+
+    title.value = "";
+    author.value = "";
+    pages.value = "";
+    check.value = false;
+
     render();
   }
 }
