@@ -40,13 +40,13 @@ function submit() {
     alert("Please fill all fields!");
     return false;
   } else {
-    let book = new Book(title.value, author.value, pages.value, check.value);
+    let book = new Book(title.value, author.value, pages.value, check.checked);
     myLibrary.push(book);
 
     title.value = "";
     author.value = "";
     pages.value = "";
-    check.value = false;
+    check.checked = false;
 
     render();
   }
@@ -85,7 +85,7 @@ function render() {
     changeBut.className = "btn btn-success";
     wasReadCell.appendChild(changeBut);
     let readStatus = "";
-    if (myLibrary[i].check == false) {
+    if (myLibrary[i].check == true) {
       readStatus = "Yes";
     } else {
       readStatus = "No";
