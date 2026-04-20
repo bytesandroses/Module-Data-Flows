@@ -7,11 +7,11 @@ window.addEventListener("load", function (e) {
 
 function populateStorage() {
   if (myLibrary.length == 0) {
-    let book1 = new Book("Robison Crusoe", "Daniel Defoe", "252", true);
+    let book1 = new Book("Robison Crusoe", "Daniel Defoe", 252, true);
     let book2 = new Book(
       "The Old Man and the Sea",
       "Ernest Hemingway",
-      "127",
+      127,
       true
     );
     myLibrary.push(book1, book2);
@@ -27,7 +27,12 @@ const submitForm = document.getElementById("bookForm");
 submitForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  let book = new Book(title.value, author.value, pages.value, check.checked);
+  let book = new Book(
+    title.value,
+    author.value,
+    parseInt(pages.value),
+    check.checked
+  );
   myLibrary.push(book);
   submitForm.reset();
 
