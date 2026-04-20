@@ -28,6 +28,12 @@ const check = document.getElementById("check");
 const submitForm = document.getElementById("bookForm");
 submitForm.addEventListener("submit", function (e) {
   e.preventDefault();
+
+  let book = new Book(title.value, author.value, pages.value, check.checked);
+  myLibrary.push(book);
+  submitForm.reset();
+
+  render();
 });
 
 //check the right input from forms and if its ok -> add the new book (object in array)
