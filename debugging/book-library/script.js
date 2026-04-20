@@ -18,20 +18,20 @@ function populateStorage() {
   }
 }
 
-const title = document.getElementById("title");
-const author = document.getElementById("author");
-const pages = document.getElementById("pages");
-const check = document.getElementById("check");
+const titleInput = document.getElementById("title");
+const authorInput = document.getElementById("author");
+const pagesInput = document.getElementById("pages");
+const checkInput = document.getElementById("check");
 
 const submitForm = document.getElementById("bookForm");
 submitForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
   let book = new Book(
-    title.value,
-    author.value,
-    parseInt(pages.value),
-    check.checked
+    titleInput.value,
+    authorInput.value,
+    parseInt(pagesInput.value),
+    checkInput.checked
   );
   myLibrary.push(book);
   submitForm.reset();
