@@ -14,8 +14,7 @@ function populateStorage() {
       "127",
       true
     );
-    myLibrary.push(book1);
-    myLibrary.push(book2);
+    myLibrary.push(book1, book2);
   }
 }
 
