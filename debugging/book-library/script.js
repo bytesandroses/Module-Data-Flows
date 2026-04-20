@@ -78,8 +78,8 @@ function render() {
 
     // Render the updated library when the delete button is clicked
     deleteBtn.addEventListener("click", () => {
-      alert(`You've deleted title: ${book.title}`);
       myLibrary.splice(index, 1);
+      alert(`You've deleted title: ${book.title}`);
       render();
     });
     deleteCell.appendChild(deleteBtn);
