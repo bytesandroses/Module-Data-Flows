@@ -28,8 +28,8 @@ submitForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
   let book = new Book(
-    titleInput.value,
-    authorInput.value,
+    titleInput.value.trim(),
+    authorInput.value.trim(),
     parseInt(pagesInput.value),
     checkInput.checked
   );
